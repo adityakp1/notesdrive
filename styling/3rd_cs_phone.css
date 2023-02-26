@@ -1,0 +1,145 @@
+@media only screen and (max-width:450px){
+
+    /* Navbar Section  */
+    .navbar{
+        height: 9vh;
+        position: relative;
+    }
+
+    .navbar .logo{
+        padding-left: 1rem;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+        padding-right: .1rem;
+        width: 38%;
+        font-size: 6.3vmin;
+    }
+
+    .navbar .logo img{
+        width: 18%;
+    }
+
+    .navbar .login-signup{
+        padding-right: .1rem;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+        padding-left: .1rem;
+        width: 35%;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .links-toggle {
+        transition: 0.65s ease;
+        margin-top: -990px;
+        background-color: rgb(86, 125, 137);
+        flex-direction: column;
+        height: 30vh;
+        width: 100%;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        font-size: 3.35vmin;
+        /* justify-content: center; */
+    }
+
+    .links-toggle li{
+        color: whitesmoke;
+    }
+
+    .toggle-switch {
+        margin-top: 17.2rem;
+    }
+
+    .navbar .login-signup .signup{
+        padding: 0.5rem 0.3rem;
+        font-size: 2.75vmin;
+    }
+
+    .notes-section .notes-mid{
+        justify-content: space-between;
+        width: 95%;
+    }
+
+    .itc img, .cd img, .os img, .cgm img, .aa img, .wc img, .hci img, .bi img, .dip img, .ml img, .iss img, .cao img, .ai img{
+        height: 60%;
+    }
+
+    .notes-section .notes-mid .itc a, .notes-section .notes-mid .cd a, .notes-section .notes-mid .os a, .notes-section .notes-mid .cgm a, .notes-section .notes-mid .aa a, .notes-section .notes-mid .wc a, .notes-section .notes-mid .hci a, .notes-section .notes-mid .bi a, .notes-section .notes-mid .dip a, .notes-section .notes-mid .ml a, .notes-section .notes-mid .iss a, .notes-section .notes-mid .cao a, .notes-section .notes-mid .ai a{
+        width: auto;
+        padding: 0.4rem 1.4rem;
+    }
+
+    .notes-section .notes-mid .itc{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .cd{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .os{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .cgm{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .aa{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .wc{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .hci{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .bi{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .dip{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .ml{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .iss{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .cao{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .ai{
+        width: 38%;
+        height: 45vh;
+    }
+
+    .main-section .itc-h, .main-section .cd-h, .main-section .os-h, .main-section .cgm-h, .main-section .aa-h, .main-section .wc-h, .main-section .hci-h, .main-section .bi-h, .main-section .dip-h, .main-section .mi-h, .main-section .iss-h, .main-section .cao-h, .main-section .ai-h{
+        width: 90%;
+    }
+
+    .main-section .itc-h a, .main-section .cd-h a, .main-section .os-h a, .main-section .cgm-h a, .main-section .aa-h a, .main-section .wc-h a, .main-section .hci-h a, .main-section .bi-h a, .main-section .dip-h a, .main-section .mi-h a, .main-section .iss-h a, .main-section .cao-h a, .main-section .ai-h a{
+        padding: 0.3rem 0.3rem;
+        border-radius: .2rem;
+    }
+
+    .top img{
+        /* width: 55%; */
+        height: 5vh;
+    }
+    
+    #move-top:hover p{
+        /* transform: scale(.5); */
+        font-size: 2.5vmin;
+    }
+}

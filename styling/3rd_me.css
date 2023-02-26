@@ -1,0 +1,1122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading ProgressBar */
+
+.preloader-wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0; 
+    bottom: 0;
+    background: rgba(19, 19, 19, 0.92);
+    z-index : 2; 
+  }
+  
+  .percentage {
+    z-index: 100;
+    border: 1px solid #ccc;
+    text-align:center;
+    color: #fff;
+    line-height: 11px;
+    font-size : 3.3vmin;
+  }
+  
+  .loader,
+  .percentage{
+    height: 13px;
+    width: 50%; 
+    border: 2px solid #11537d;
+    border-radius: 20px;
+    font-weight: 300;
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    margin : auto; 
+  }
+  .loader:after,
+  .percentage:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .trackbar {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    overflow: hidden;
+    position: relative;
+    opacity: 0.99;
+  }
+  
+  .loadbar {
+    width: 0%;
+    height: 100%;
+    background: #004f87; /* Stripes Background Gradient */
+    box-shadow: 0px 0px 14px 1px #002487; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: flicker 3s infinite;
+    overflow: hidden;
+  }
+  
+  .glow {
+    width: 0%;
+    height: 0%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 60px 10px #0e1d58;
+    position: absolute;
+    bottom: -5px;
+    animation: animation .3s infinite;
+  }
+  
+  @keyframes animation {
+    10% {
+      opacity: 0.9;
+    }
+    30% {
+      opacity: 0.86;
+    }
+    60% {
+      opacity: 0.8;
+    }
+    80% {
+      opacity: 0.75;
+    }
+  }
+
+/* Navbar Section  */
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(195, 223, 247);
+    /* position: sticky;
+    z-index: 1;
+    top: 0; */
+    /* position: fixed; */
+}
+
+.navbar .logo {
+    padding: 1rem;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 5vmin;
+    font-weight: 800;
+    letter-spacing: .4px;
+    color: cadetblue;
+}
+
+.navbar .login-signup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    width: 40%;
+    font-family: 'Barlow', sans-serif;
+    font-size: 3.2vmin;
+    font-weight: 500;
+}
+
+.navbar .login-signup a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .login-signup a:hover{
+    text-decoration: underline;
+    transition: .4s;
+}
+
+.navbar .login-signup li:hover{
+    text-decoration: underline;
+    color:darksalmon;
+    transition: .4s;
+}
+
+.links-toggle{
+    width: 100%;
+    display: flex;
+    font-size: 3vmin;
+    color: aliceblue;
+    align-items: center;
+    /* font-family: 'Roboto Flex', sans-serif; */
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.toggle {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    width: 10%;
+    top: 13px;
+    right: 13px;
+}
+
+.navbar .login-signup .signup {
+    text-decoration: none;
+    color: black;
+    background-color: cadetblue;
+    color: whitesmoke;
+    padding: 1rem;
+    border-radius: .4rem;
+}
+
+.navbar .login-signup .login {
+    color: black;
+}
+
+
+/* Notes Section  */
+
+.notes-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01)), url('../background-white-shape-1-sm.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.notes-mid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+/* Math Notes  */
+
+.notes-section .notes-mid .math {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .math img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/mathematics-concept-illustration_114360-4288.jpg?w=740&t=st=1673616251~exp=1673616851~hmac=abd5f7993fc90522d5213171bfd972d9da788c280e46e797a84e1b154fb5477d');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .math a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .math a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .math h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* DSA Notes  */
+
+.notes-section .notes-mid .dsa {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .dsa img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/hr-manager-with-employee-interview-business-flow-chart-employee-assessment-software-hr-company-system-employee-check-programme-concept_335657-403.jpg?w=900&t=st=1673616692~exp=1673617292~hmac=495ff71505aedc71166158bb7b84d942f10732eb79d866bc660caf1c9f127524');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .dsa a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+
+}
+
+.notes-section .notes-mid .dsa a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .dsa h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* Digital Electronics Notes  */
+
+.notes-section .notes-mid .digital-elec {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .digital-elec img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/premium-vector/isometric-pc-maintenance-vector-concept_516005-173.jpg?w=900');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .digital-elec a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .digital-elec a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .digital-elec h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* Oops Notes  */
+
+.notes-section .notes-mid .oops {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .oops img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/programmer-concept-idea-coding-testing-writing-program-using-internet-different-software-website-development-optimization-isolated-vector-illustration_613284-2459.jpg?w=740&t=st=1673616851~exp=1673617451~hmac=727e314c1285533cca8ebcdb8569a8290ca1c41817ea283a47cbfe0c25cc6fbf');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .oops a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .oops a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .oops h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* Software Engg Notes  */
+
+.notes-section .notes-mid .se {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .se img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/premium-vector/system-administrator-online-service-platform-technical-work_277904-16674.jpg?w=740');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .se a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .se a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .se h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* Technical Communication Notes  */
+
+.notes-section .notes-mid .tc {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .tc img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/live-collaboration-concept-illustration_114360-2514.jpg?w=900&t=st=1673617053~exp=1673617653~hmac=33da2d507106799236dc39684bc77182c748d9c874601e5b87bc67ccee88cfe1');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .tc a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .2s linear;
+}
+
+.notes-section .notes-mid .tc a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .tc h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+/* Math 4th sem notes  */
+.notes-section .notes-mid .math4 {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .math4 img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/mathematics-concept-illustration_114360-4288.jpg?w=740&t=st=1673616251~exp=1673616851~hmac=abd5f7993fc90522d5213171bfd972d9da788c280e46e797a84e1b154fb5477d');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .math4 a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .math4 a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .math4 h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Managerial Economics  */
+.notes-section .notes-mid .me {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .me img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/illustrated-stock-market-analysis_23-2148584362.jpg?w=900&t=st=1676584553~exp=1676585153~hmac=3d2730574824ab9f97bb4786be3f6b377e9756c51bbef332b89a61e9a27980ef');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .me a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .me a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .me h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Microprocessor interface  */
+.notes-section .notes-mid .mi {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .mi img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/printed-circuit-board-concept-illustration_114360-4999.jpg?w=740&t=st=1676584726~exp=1676585326~hmac=88c245794962852b3484532a29b165fb1632bb7d3532ec01344b22769d9806e2');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .mi a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .mi a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .mi h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Database management  */
+.notes-section .notes-mid .dbms {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .dbms img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/data-base-administrator-concept-admin-manager-working-data-center-modern-computer-technology-it-profession-idea-isolated-vector-illustration_613284-2327.jpg?w=740&t=st=1676584665~exp=1676585265~hmac=58dfd80e8a893e0ea6ba6d4a40af15cdcdcdd7fa08c065501267594e2dec38f7');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .dbms a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .dbms a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .dbms h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Main Section  */
+.main-section {
+    width: 100%;
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../background-white-shape-3.svg');
+    background-position: center;
+    background-size: contain;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+
+/* math units */
+.main-section .math-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .math-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .math-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    /* background-color: navajowhite; */
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* dsa units  */
+.main-section .dsa-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .dsa-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .dsa-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* de units */
+.main-section .de-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .de-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .de-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* oop units  */
+.main-section .oops-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .oops-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .oops-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* se units  */
+.main-section .se-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .se-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .se-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* tc units */
+.main-section .tc-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .tc-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .tc-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* math4 units */
+.main-section .math4-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .math4-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .math4-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* managerial economics units */
+.main-section .me-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .me-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .me-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* microprocessor units */
+.main-section .mi-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .mi-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .mi-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* database units */
+.main-section .dbms-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .dbms-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .dbms-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Top scroll  */
+
+#move-top {
+    cursor: pointer;
+    position: fixed;
+    right: 3%;
+    bottom: 2%;
+}
+
+#move-top p {
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    color: grey;
+    display: none;
+}
+
+#move-top:hover p {
+    display: block;
+    font-style: bold;
+    font-weight: 500;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Section  */
+
+.footer {
+    background-color: rgba(240, 248, 255, 0.745);
+}
+
+.footer .footer-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    font-size: 6vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+.footer .footer-up h2 {
+    color: rgb(23, 152, 109);
+}
+
+.footer .footer-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2.9vmin;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 20vh;
+    padding-bottom: 1rem;
+    color: rgb(76, 75, 75);
+}
+
+.footer .footer-down a {
+    text-decoration: none;
+    color: crimson;
+}

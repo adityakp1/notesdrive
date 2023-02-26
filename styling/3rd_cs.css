@@ -1,0 +1,1499 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading ProgressBar */
+
+.preloader-wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0; 
+    bottom: 0;
+    background: rgba(19, 19, 19, 0.92);
+    z-index : 2; 
+  }
+  
+  .percentage {
+    z-index: 100;
+    border: 1px solid #ccc;
+    text-align:center;
+    color: #fff;
+    line-height: 11px;
+    font-size : 3.3vmin;
+  }
+  
+  .loader,
+  .percentage{
+    height: 13px;
+    width: 50%; 
+    border: 2px solid #11537d;
+    border-radius: 20px;
+    font-weight: 300;
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    margin : auto; 
+  }
+  .loader:after,
+  .percentage:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .trackbar {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    overflow: hidden;
+    position: relative;
+    opacity: 0.99;
+  }
+  
+  .loadbar {
+    width: 0%;
+    height: 100%;
+    background: #004f87; /* Stripes Background Gradient */
+    box-shadow: 0px 0px 14px 1px #002487; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: flicker 3s infinite;
+    overflow: hidden;
+  }
+  
+  .glow {
+    width: 0%;
+    height: 0%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 60px 10px #0e1d58;
+    position: absolute;
+    bottom: -5px;
+    animation: animation .3s infinite;
+  }
+  
+  @keyframes animation {
+    10% {
+      opacity: 0.9;
+    }
+    30% {
+      opacity: 0.86;
+    }
+    60% {
+      opacity: 0.8;
+    }
+    80% {
+      opacity: 0.75;
+    }
+  }
+
+/* Navbar Section  */
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(195, 223, 247);
+    /* position: sticky;
+    z-index: 1;
+    top: 0; */
+    /* position: fixed; */
+}
+
+.navbar .logo {
+    padding: 1rem;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 5vmin;
+    font-weight: 800;
+    letter-spacing: .4px;
+    color: cadetblue;
+}
+
+.navbar .login-signup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    width: 40%;
+    font-family: 'Barlow', sans-serif;
+    font-size: 3.2vmin;
+    font-weight: 500;
+}
+
+.navbar .login-signup a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .login-signup a:hover{
+    text-decoration: underline;
+    transition: .4s;
+}
+
+.navbar .login-signup li:hover{
+    text-decoration: underline;
+    color:darksalmon;
+    transition: .4s;
+}
+
+.links-toggle{
+    width: 100%;
+    display: flex;
+    font-size: 3vmin;
+    color: aliceblue;
+    align-items: center;
+    /* font-family: 'Roboto Flex', sans-serif; */
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.toggle {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    width: 10%;
+    top: 13px;
+    right: 13px;
+}
+
+.navbar .login-signup .signup {
+    text-decoration: none;
+    color: black;
+    background-color: cadetblue;
+    color: whitesmoke;
+    padding: 1rem;
+    border-radius: .4rem;
+}
+
+.navbar .login-signup .login {
+    color: black;
+}
+
+
+/* Notes Section  */
+
+.notes-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01)), url('../background-white-shape-1-sm.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.notes-mid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+/* Main Section  */
+.main-section {
+    width: 100%;
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../background-white-shape-3.svg');
+    background-position: center;
+    background-size: contain;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-color: rgb(243, 239, 239);
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+/* Information Theory & Coding Notes  */
+
+.notes-section .notes-mid .itc {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .itc img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/programmer-working-web-development-code-engineer-programming-python-php-java-script-computer_90220-250.jpg?w=740&t=st=1676700943~exp=1676701543~hmac=e1b6c390a5f1a2135c97bcc5309bc9dab75ac2ba3a1656a112ba5968e5d4b716');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .itc a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .itc a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .itc h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Compiler Design Notes  */
+
+.notes-section .notes-mid .cd {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .cd img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/hand-drawn-flat-design-api-illustration_52683-84601.jpg?w=740&t=st=1676701032~exp=1676701632~hmac=0745363d79d28c961555ae14cbb1904bf5556bbbd688f9899117846374b05976');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .cd a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+
+}
+
+.notes-section .notes-mid .cd a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .cd h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* Operating System Notes  */
+
+.notes-section .notes-mid .os {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .os img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/cross-platform-software-concept-illustration_114360-7313.jpg?t=st=1676701071~exp=1676701671~hmac=fa33409881869150b3af08a595aa471fdde5f602719de8e73eec770a91f7d2f6');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .os a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .os a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .os h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* Computer Graphics & Multimedia Notes  */
+
+.notes-section .notes-mid .cgm {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .cgm img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-photo/laptop-with-different-applications-installed_1134-89.jpg?w=900&t=st=1676701151~exp=1676701751~hmac=d5093ebc7455c6c3ed07560ac1992116220d3c38e7e7cdfc3ae1f366a264971a');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .cgm a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .cgm a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .cgm h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* Analysis of Algorithms Notes  */
+
+.notes-section .notes-mid .aa {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .aa img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/data-processing-isometric-icon-business-analytics-statistics-magnifying-glass_39422-974.jpg?t=st=1676701189~exp=1676701789~hmac=1dbf1cd375b2086cd07672a5a82882c38a982e53a67ce7ec9e14505419c322b0');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .aa a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .aa a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .aa h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* Wireless Communication Notes  */
+
+.notes-section .notes-mid .wc {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+/* https://img.freepik.com/free-vector/public-wi-fi-hotspot-wireless-technology-free-signal-zone-web-connection-people-surfing-internet-using-portable-gadgets-smartphone-laptop_335657-3604.jpg?w=740&t=st=1676701256~exp=1676701856~hmac=c48588d35d71ae8d7851b12b44929c094ed45193c172eea4ef1aec6aee6ab5bb */
+.notes-section .notes-mid .wc img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/public-free-wi-fi-hotspot-zone-wireless-connection-flat-isometric-concept-people-surfing-internet-wifi-shaped-podium-illustration_126523-419.jpg?t=st=1676701240~exp=1676701840~hmac=d44d0902b6d3792e29004dcdee0eadd530faf69e724b0604c56ee6133e5832b5');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .wc a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .2s linear;
+}
+
+.notes-section .notes-mid .wc a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .wc h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+/* Human Computer Interaction notes  */
+.notes-section .notes-mid .hci {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .hci img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/people-face-scan-devices_24908-56402.jpg?w=740&t=st=1676701478~exp=1676702078~hmac=f4ecd275e1891e48d3dd7418dd5886ac8a34201bef2ae654d08d0df27b62a81e');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .hci a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .hci a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .hci h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Bioinformatics  */
+.notes-section .notes-mid .bi {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .bi img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/gradient-biotechnology-concept_52683-58641.jpg?w=900&t=st=1676701575~exp=1676702175~hmac=a6280b22fab3249730f8339a99ce66f26f7b6ac8937a346f543674e34b1d7359');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .bi a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .bi a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .bi h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* 6th SEM  */
+/* Digital Image Processing Notes  */
+.notes-section .notes-mid .dip {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .dip img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/people-taking-photo-mobile-phone-he-chose-picture-from-gallery-use_1150-51073.jpg?w=900&t=st=1676701639~exp=1676702239~hmac=925b19f3d026db3c184a85c4dc571b4d5b78efcdd19a9b3e9fe0d0803d50c96f');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .dip a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .dip a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .dip h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Machine learning  */
+.notes-section .notes-mid .ml {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .ml img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/premium-vector/thinkingrobot_46706-1236.jpg?w=900');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .ml a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .ml a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .ml h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Information Security System Notes  */
+.notes-section .notes-mid .iss {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .iss img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.11)), url('https://img.freepik.com/free-vector/personal-digital-security_74855-4560.jpg?t=st=1676702095~exp=1676702695~hmac=90b6f4b5397cc5fb4765dce7688a6b37c1613977aa85007bd4b08d5d8509ca76');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .iss a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .iss a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .iss h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Computer Architecture and Organization Notes  */
+.notes-section .notes-mid .cao {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .cao img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/premium-vector/server-maintenance-concept-3d-isometric-outline-web-design-technical-support-computer-hardware_9209-9188.jpg?w=900');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .cao a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .cao a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .cao h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Artificial intelligence Notes  */
+.notes-section .notes-mid .ai {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .ai img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-photo/ai-technology-microchip-background-digital-transformation-concept_53876-124669.jpg?t=st=1676702386~exp=1676702986~hmac=55ffdc9e0de801373aa6ab4b12773a7e979731ac5b30f992f4d9331517c9c389');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .ai a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .ai a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .ai h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* itc units */
+.main-section .itc-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .itc-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .itc-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    /* background-color: navajowhite; */
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* compiler design units  */
+.main-section .cd-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .cd-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .cd-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* operating system units */
+.main-section .os-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .os-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .os-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Computer Graphics Multimedia units  */
+.main-section .cgm-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .cgm-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .cgm-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Analysis of Algorithm units  */
+.main-section .aa-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .aa-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .aa-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Wireless Communication units */
+.main-section .wc-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .wc-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .wc-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Human Computer Interface units */
+.main-section .hci-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .hci-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .hci-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Bioinformatics units */
+.main-section .bi-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .bi-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .bi-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Digital Image Processing units */
+.main-section .dip-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .dip-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .dip-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Machine Learning units */
+.main-section .ml-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .ml-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .ml-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Information Security System units */
+.main-section .iss-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .iss-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .iss-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Computer Architecture and Organization units */
+.main-section .cao-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .cao-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .cao-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Artificial Intelligence units */
+.main-section .ai-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .ai-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .ai-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Cloud Computing units */
+.main-section .cc-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .cc-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .cc-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Distributed System units */
+.main-section .ds-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .ds-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .ds-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Software Defined Network units */
+.main-section .sdn-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .sdn-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .sdn-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Ecommerce & ERP units */
+.main-section .ec-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .ec-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .ec-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Top scroll  */
+
+#move-top {
+    cursor: pointer;
+    position: fixed;
+    right: 3%;
+    bottom: 2%;
+}
+
+#move-top p {
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    color: grey;
+    display: none;
+}
+
+#move-top:hover p {
+    display: block;
+    font-style: bold;
+    font-weight: 500;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Section  */
+
+.footer {
+    background-color: rgba(240, 248, 255, 0.745);
+}
+
+.footer .footer-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    font-size: 6vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+.footer .footer-up h2 {
+    color: rgb(23, 152, 109);
+}
+
+.footer .footer-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2.9vmin;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 20vh;
+    padding-bottom: 1rem;
+    color: rgb(76, 75, 75);
+}
+
+.footer .footer-down a {
+    text-decoration: none;
+    color: crimson;
+}

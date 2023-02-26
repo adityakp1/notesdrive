@@ -1,0 +1,566 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body,html{
+    scroll-behavior: smooth;
+}
+
+/* Loading ProgressBar */
+
+.preloader-wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0; 
+    bottom: 0;
+    background: rgba(19, 19, 19, 0.92);
+    z-index : 2; 
+  }
+  
+  .percentage {
+    z-index: 100;
+    border: 1px solid #ccc;
+    text-align:center;
+    color: #fff;
+    line-height: 11px;
+    font-size : 3.3vmin;
+  }
+  
+  .loader,
+  .percentage{
+    height: 13px;
+    width: 50%; 
+    border: 2px solid #11537d;
+    border-radius: 20px;
+    font-weight: 300;
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    margin : auto; 
+  }
+  .loader:after,
+  .percentage:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .trackbar {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    overflow: hidden;
+    position: relative;
+    opacity: 0.99;
+  }
+  
+  .loadbar {
+    width: 0%;
+    height: 100%;
+    background: #004f87; /* Stripes Background Gradient */
+    box-shadow: 0px 0px 14px 1px #002487; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: flicker 3s infinite;
+    overflow: hidden;
+  }
+  
+  .glow {
+    width: 0%;
+    height: 0%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 60px 10px #0e1d58;
+    position: absolute;
+    bottom: -5px;
+    animation: animation .3s infinite;
+  }
+  
+  @keyframes animation {
+    10% {
+      opacity: 0.9;
+    }
+    30% {
+      opacity: 0.86;
+    }
+    60% {
+      opacity: 0.8;
+    }
+    80% {
+      opacity: 0.75;
+    }
+  }
+
+/* Navbar Section  */
+
+.navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(195, 223, 247);
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    /* position: fixed; */
+}
+
+.navbar .logo{
+    padding: 1rem;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 5vmin;
+    font-weight: 800;
+    letter-spacing: .4px;
+    color: cadetblue;
+}
+
+.navbar .login-signup{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    width: 50%;
+    font-family: 'Barlow', sans-serif;
+    font-size: 3.2vmin;
+    font-weight: 500;
+}
+
+.navbar .login-signup a{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .login-signup li:hover{
+    text-decoration: underline;
+    color:darksalmon;
+    transition: .4s;
+}
+
+.links-toggle{
+    width: 100%;
+    display: flex;
+    font-size: 3vmin;
+    color: aliceblue;
+    align-items: center;
+    /* font-family: 'Roboto Flex', sans-serif; */
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.toggle {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    width: 10%;
+    top: 13px;
+    right: 13px;
+}
+
+
+/* Gallery Section  */
+.gallery{
+    width: 100%;
+    height: 130vh;
+    background-image: url('../background-blue.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+.gallery .gallery-mid{
+    width: 75%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery .gallery-mid h1{
+    font-size: 10vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+.gallery .gallery-mid .slogan{
+    font-size: 5vmin;
+    margin-top: 2rem;
+}
+
+.gallery .gallery-mid .search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: .3rem;
+    max-height: 400px;
+    min-height: 70px;
+    margin-top: 3rem;
+    background-color: rgb(249, 249, 249);
+    box-shadow: 0px 10px 8px rgb(195, 228, 228);
+    border-color: rgb(142, 226, 226);
+    border-width: 1.5px;
+    border-style: solid;
+    border-radius: .3rem;
+}
+.gallery .gallery-mid .search .left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 65%;
+}
+
+.search .left img{
+    padding: 1rem;
+    width: 40px;
+}
+.search .left p{
+    padding: 1rem;
+    font-size: 2.9vmin;
+    color: rgb(95, 94, 94);
+    font-weight: 500;
+    font-family: 'Barlow', sans-serif;
+}
+
+.gallery .gallery-mid .search .right{
+    text-align: center;
+    padding: .8rem;
+    margin-right: .6rem;
+    /* background-color: rgb(68, 149, 219); */
+    width: 30%;
+}
+
+.search .right a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: .8rem 5rem;
+    font-weight: 500;
+    font-family: 'Barlow', sans-serif;
+    background-color: rgb(68, 149, 219);
+    width: 100%;
+}
+
+/* Gallery Testinomial  */
+.gallery-testinomial{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.gallery-testinomial .one, .gallery-testinomial .two, .gallery-testinomial .three{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-testinomial h2, .gallery-testinomial p{
+    margin-top: .3rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Main Section  */
+.main-section{
+    width: 100%;
+    margin-top: 7rem;
+}
+
+.main-section .heading h1{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10vmin;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+}
+
+.main-section .details{
+    width: 100%;
+    font-family: 'Barlow', sans-serif;
+    background-image: url('../background-yellow-shape-1.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Main section Notes section  */
+
+.main-section .details h1{
+    font-weight: 800;
+    font-size: 8vmin;
+    line-height: 1;
+    margin-top: 2rem;
+    width: 50%;
+    margin-left: 5rem;
+}
+
+.main-section .details .courses{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.main-section .details .courses .c1{
+    width: 28%;
+    height: 50vh;
+    box-shadow: 5px 5px 20px rgb(255, 226, 164);
+    border-radius: .4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem;
+    /* cursor:pointer; */
+}
+
+.main-section .details .courses .c1 img{
+    height: 50vh;
+}
+
+.main-section .details .courses .c1 .intro{
+    height: 8vh;
+    padding: 6px;
+    box-sizing: border-box;
+    width: 100%;
+    background: rgb(248, 225, 174);
+    color: black;
+    position: absolute;
+    bottom: 0px;
+    transition: 0.2s linear;
+}
+
+.main-section .details .courses .c1 .intro a{
+    width: 50%;
+    padding: 0.35rem;
+    margin: auto;
+}
+
+.main-section .details .courses .c1 a{
+    text-decoration: none;
+    color: white;
+    padding: .2rem;
+    background-color: cadetblue;
+    border-radius: .3rem;
+}
+
+.main-section .details .courses .c1 .intro .hover{
+    /* margin: .2rem; */
+    margin-top: .6rem;
+    font-size: 3vmin;
+    /* visibility: hidden; */
+    display: none;
+    opacity: 0;
+}
+
+.main-section .details .courses .c1:hover .intro{
+    height: 37vh;
+    transition: 0.3s linear;
+}
+
+/* Course 3 height */
+.main-section .details .courses #c3:hover .intro{
+    height: 40vh;
+    transition: 0.3s linear;
+}
+
+/* Course 1 Hover  */
+
+.main-section .details .courses #c1 img{
+    background-image: url('https://img.freepik.com/free-vector/code-testing-cartoon-banner-functional-test-methodology-programming-search-errors-bugs-website-platform-development-dashboard-usability-optimization-computer-pc-vector-illustration_107791-3766.jpg?w=1380&t=st=1673490313~exp=1673490913~hmac=c07088ab316b32d9ae3a510e759bc65634409ebd35f22354c47bf4fe40c00987');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.main-section .details .courses #c1:hover img{
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('https://img.freepik.com/free-vector/code-testing-cartoon-banner-functional-test-methodology-programming-search-errors-bugs-website-platform-development-dashboard-usability-optimization-computer-pc-vector-illustration_107791-3766.jpg?w=1380&t=st=1673490313~exp=1673490913~hmac=c07088ab316b32d9ae3a510e759bc65634409ebd35f22354c47bf4fe40c00987');
+}
+
+.main-section .details .courses #c1:hover .intro{
+    background: rgba(98, 47, 143, 0.9);
+    color: whitesmoke;
+}
+
+/* Course 2 Hover  */
+
+.main-section .details .courses #c2 img{
+    background-image: url('https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?w=996&t=st=1673490438~exp=1673491038~hmac=8ea2f128f3079d1ae88516a1f53bd61e53461e69ae1ab07883ccef94f39754c1');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.main-section .details .courses #c2:hover img{
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?w=996&t=st=1673490438~exp=1673491038~hmac=8ea2f128f3079d1ae88516a1f53bd61e53461e69ae1ab07883ccef94f39754c1');
+}
+
+.main-section .details .courses #c2:hover .intro{
+    background: rgba(136, 44, 93, 0.867);
+    color: whitesmoke;
+}
+
+/* Course 3 Hover  */
+
+.main-section .details .courses #c3 img{
+    background-image: url('https://img.freepik.com/free-photo/sun-setting-silhouette-electricity-pylons_1127-3239.jpg?w=826&t=st=1673490551~exp=1673491151~hmac=47ec4ad7f5f71ce68a2a6fd27acd0f98257d4fbcf68d95faaaa609a7cf64c070');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.main-section .details .courses #c3:hover img{
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('https://img.freepik.com/free-photo/sun-setting-silhouette-electricity-pylons_1127-3239.jpg?w=826&t=st=1673490551~exp=1673491151~hmac=47ec4ad7f5f71ce68a2a6fd27acd0f98257d4fbcf68d95faaaa609a7cf64c070');
+}
+
+.main-section .details .courses #c3:hover .intro{
+    background: rgba(46, 101, 152, 0.879);
+    color: whitesmoke;
+}
+
+/* Courses Img 4 Hover  */
+
+.main-section .details .courses #c4 img{
+    background-image: url('https://img.freepik.com/free-photo/portrait-young-worker-hard-hat-large-metalworking-plant_146671-19568.jpg?w=826&t=st=1673490688~exp=1673491288~hmac=4c6f54ee71b96901bc3eed0bbdbfe61cafc2ca64552b4589bb1222efdabc924b');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.main-section .details .courses #c4:hover img{
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('https://img.freepik.com/free-photo/portrait-young-worker-hard-hat-large-metalworking-plant_146671-19568.jpg?w=826&t=st=1673490688~exp=1673491288~hmac=4c6f54ee71b96901bc3eed0bbdbfe61cafc2ca64552b4589bb1222efdabc924b');
+}
+
+.main-section .details .courses #c4:hover .intro{
+    background: rgba(70, 86, 125, 0.979);
+    color: whitesmoke;
+}
+
+/* Course 5 Hover  */
+
+.main-section .details .courses #c5 img{
+    background-image: url('https://img.freepik.com/free-photo/pointing-sketch_1098-14323.jpg?w=826&t=st=1673490826~exp=1673491426~hmac=77c7c4e524bc5605c6b880d94ebfedd6aaf0dfc86c45fbc724ae5102e4d9c603');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.main-section .details .courses #c5:hover img{
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('https://img.freepik.com/free-photo/pointing-sketch_1098-14323.jpg?w=826&t=st=1673490826~exp=1673491426~hmac=77c7c4e524bc5605c6b880d94ebfedd6aaf0dfc86c45fbc724ae5102e4d9c603');
+}
+
+.main-section .details .courses #c5:hover .intro{
+    background: rgba(174, 135, 132, 0.884);
+    color: whitesmoke;
+}
+
+/* Course 6 Hover  */
+
+.main-section .details .courses #c6 img{
+    background-image: url('https://img.freepik.com/premium-photo/hand-holding-tin-soldering-iron-solder-chip-place_78621-4923.jpg?w=826');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.main-section .details .courses #c6:hover img{
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('https://img.freepik.com/premium-photo/hand-holding-tin-soldering-iron-solder-chip-place_78621-4923.jpg?w=826');
+}
+
+.main-section .details .courses #c6:hover .intro{
+    background: rgba(26, 16, 48, 0.874);
+    color: whitesmoke;
+}
+
+.main-section .details .courses .c1:hover .hover {
+    opacity: 1;
+    display: block;
+}
+
+.intro h3{
+    font-size: 4.5vmin;
+}
+
+/* Example Secion  */
+
+.example{
+    width: 100%;
+    height: 80vh;
+    background-image: url('../background-white-shape-1-sm.svg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.example .mid{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 5vmin;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+}
+
+/* Footer Section  */
+
+.footer{
+    background-color: aliceblue;
+}
+
+.footer .footer-up{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    font-size: 6vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+.footer .footer-up h2{
+    color: rgb(23, 152, 109);
+}
+
+.footer .footer-down{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2.9vmin;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 20vh;
+    padding-bottom: 1rem;
+    color: rgb(76, 75, 75);
+}
+
+.footer .footer-down a{
+    text-decoration: none;
+    color:crimson;
+}

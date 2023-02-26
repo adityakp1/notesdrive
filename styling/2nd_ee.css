@@ -1,0 +1,1373 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading ProgressBar */
+
+.preloader-wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0; 
+    bottom: 0;
+    background: rgba(19, 19, 19, 0.92);
+    z-index : 2; 
+  }
+  
+  .percentage {
+    z-index: 100;
+    border: 1px solid #ccc;
+    text-align:center;
+    color: #fff;
+    line-height: 11px;
+    font-size : 3.3vmin;
+  }
+  
+  .loader,
+  .percentage{
+    height: 13px;
+    width: 50%; 
+    border: 2px solid #11537d;
+    border-radius: 20px;
+    font-weight: 300;
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    margin : auto; 
+  }
+  .loader:after,
+  .percentage:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .trackbar {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    overflow: hidden;
+    position: relative;
+    opacity: 0.99;
+  }
+  
+  .loadbar {
+    width: 0%;
+    height: 100%;
+    background: #004f87; /* Stripes Background Gradient */
+    box-shadow: 0px 0px 14px 1px #002487; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: flicker 3s infinite;
+    overflow: hidden;
+  }
+  
+  .glow {
+    width: 0%;
+    height: 0%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 60px 10px #0e1d58;
+    position: absolute;
+    bottom: -5px;
+    animation: animation .3s infinite;
+  }
+  
+  @keyframes animation {
+    10% {
+      opacity: 0.9;
+    }
+    30% {
+      opacity: 0.86;
+    }
+    60% {
+      opacity: 0.8;
+    }
+    80% {
+      opacity: 0.75;
+    }
+  }
+
+/* Navbar Section  */
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(195, 223, 247);
+    /* position: sticky;
+    z-index: 1;
+    top: 0; */
+    /* position: fixed; */
+}
+
+.navbar .logo {
+    padding: 1rem;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 5vmin;
+    font-weight: 800;
+    letter-spacing: .4px;
+    color: cadetblue;
+}
+
+.navbar .login-signup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    width: 40%;
+    font-family: 'Barlow', sans-serif;
+    font-size: 3.2vmin;
+    font-weight: 500;
+}
+
+.navbar .login-signup a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .login-signup a:hover{
+    text-decoration: underline;
+    transition: .4s;
+}
+
+.navbar .login-signup li:hover{
+    text-decoration: underline;
+    color:darksalmon;
+    transition: .4s;
+}
+
+.links-toggle{
+    width: 100%;
+    display: flex;
+    font-size: 3vmin;
+    color: aliceblue;
+    align-items: center;
+    /* font-family: 'Roboto Flex', sans-serif; */
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.toggle {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    width: 10%;
+    top: 13px;
+    right: 13px;
+}
+
+.navbar .login-signup .signup {
+    text-decoration: none;
+    color: black;
+    background-color: cadetblue;
+    color: whitesmoke;
+    padding: 1rem;
+    border-radius: .4rem;
+}
+
+.navbar .login-signup .login {
+    color: black;
+}
+
+
+/* Notes Section  */
+
+.notes-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01)), url('../background-white-shape-1-sm.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.notes-mid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+/* Main Section  */
+.main-section {
+    width: 100%;
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../background-white-shape-3.svg');
+    background-position: center;
+    background-size: contain;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-color: rgb(243, 239, 239);
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+/* Math Notes  */
+
+.notes-section .notes-mid .math {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .math img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/mathematics-concept-illustration_114360-4288.jpg?w=740&t=st=1673616251~exp=1673616851~hmac=abd5f7993fc90522d5213171bfd972d9da788c280e46e797a84e1b154fb5477d');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .math a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .math a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .math h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* PGP Notes  */
+
+.notes-section .notes-mid .pgp {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .pgp img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/power-generation-orthogonal-illustration_1284-40074.jpg?w=996&t=st=1676655924~exp=1676656524~hmac=1f0d8c73d0751d8f4332e9a5e879778096f16e0ea9779830a93f3667b48b47b0');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .pgp a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+
+}
+
+.notes-section .notes-mid .pgp a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .pgp h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* ECA Unit  */
+
+.notes-section .notes-mid .eca {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .eca img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-photo/close-up-electronic-components_23-2148419099.jpg?w=900&t=st=1676656031~exp=1676656631~hmac=0b052f02cc663d44824338bff690981e535bfefe07f0cfc899d4b9e8a5ce06a4');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .eca a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .eca a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .eca h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* AE Notes  */
+
+.notes-section .notes-mid .ae {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .ae img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/black-countdown-board-timer-vector-illustration_1284-41914.jpg?t=st=1676656182~exp=1676656782~hmac=c6c95899cd474ee6a0aee00b8dac2f98d4f8a7eb7edf8d00b4102feac5158024');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .ae a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .ae a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .ae h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* Software Engg Notes  */
+
+.notes-section .notes-mid .em {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .em img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/premium-vector/system-administrator-online-service-platform-technical-work_277904-16674.jpg?w=740');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .em a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .em a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .em h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* Technical Communication Notes  */
+
+.notes-section .notes-mid .tc {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .tc img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/live-collaboration-concept-illustration_114360-2514.jpg?w=900&t=st=1673617053~exp=1673617653~hmac=33da2d507106799236dc39684bc77182c748d9c874601e5b87bc67ccee88cfe1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .tc a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .2s linear;
+}
+
+.notes-section .notes-mid .tc a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .tc h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+/* Technical Communication Notes  */
+
+.notes-section .notes-mid .ef {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .ef img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/live-collaboration-concept-illustration_114360-2514.jpg?w=900&t=st=1673617053~exp=1673617653~hmac=33da2d507106799236dc39684bc77182c748d9c874601e5b87bc67ccee88cfe1');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .ef a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .2s linear;
+}
+
+.notes-section .notes-mid .ef a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .ef h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+/* bio 4th sem notes  */
+.notes-section .notes-mid .bio {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .bio img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/mathematics-concept-illustration_114360-4288.jpg?w=740&t=st=1673616251~exp=1673616851~hmac=abd5f7993fc90522d5213171bfd972d9da788c280e46e797a84e1b154fb5477d');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .bio a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .bio a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .bio h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Managerial Economics  */
+.notes-section .notes-mid .me {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .me img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/illustrated-stock-market-analysis_23-2148584362.jpg?w=900&t=st=1676584553~exp=1676585153~hmac=3d2730574824ab9f97bb4786be3f6b377e9756c51bbef332b89a61e9a27980ef');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .me a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .me a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .me h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* emi  */
+.notes-section .notes-mid .emi {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .emi img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/printed-circuit-board-concept-illustration_114360-4999.jpg?w=740&t=st=1676584726~exp=1676585326~hmac=88c245794962852b3484532a29b165fb1632bb7d3532ec01344b22769d9806e2');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .emi a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .emi a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .emi h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Electrical machines 2  */
+.notes-section .notes-mid .em2 {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .em2 img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/data-base-administrator-concept-admin-manager-working-data-center-modern-computer-technology-it-profession-idea-isolated-vector-illustration_613284-2327.jpg?w=740&t=st=1676584665~exp=1676585265~hmac=58dfd80e8a893e0ea6ba6d4a40af15cdcdcdd7fa08c065501267594e2dec38f7');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .em2 a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .em2 a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .em2 h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* pe unit  */
+.notes-section .notes-mid .pe {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .pe img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/data-base-administrator-concept-admin-manager-working-data-center-modern-computer-technology-it-profession-idea-isolated-vector-illustration_613284-2327.jpg?w=740&t=st=1676584665~exp=1676585265~hmac=58dfd80e8a893e0ea6ba6d4a40af15cdcdcdd7fa08c065501267594e2dec38f7');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .pe a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .pe a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .pe h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* ss unit  */
+.notes-section .notes-mid .ss {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .ss img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img.freepik.com/free-vector/data-base-administrator-concept-admin-manager-working-data-center-modern-computer-technology-it-profession-idea-isolated-vector-illustration_613284-2327.jpg?w=740&t=st=1676584665~exp=1676585265~hmac=58dfd80e8a893e0ea6ba6d4a40af15cdcdcdd7fa08c065501267594e2dec38f7');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .ss a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .ss a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .ss h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* math units */
+.main-section .math-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .math-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .math-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    /* background-color: navajowhite; */
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* pgp units  */
+.main-section .pgp-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .pgp-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .pgp-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* eca units */
+.main-section .eca-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .eca-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .eca-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* ae units  */
+.main-section .ae-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .ae-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .ae-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* em units  */
+.main-section .em-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .em-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .em-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* tc units */
+.main-section .tc-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .tc-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .tc-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* ef units */
+.main-section .ef-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .ef-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .ef-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* bio units */
+.main-section .bio-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .bio-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .bio-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* managerial economics units */
+.main-section .me-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .me-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .me-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* emi units */
+.main-section .emi-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .emi-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .emi-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* em-II units */
+.main-section .em2-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .em2-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .em2-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* bio units */
+.main-section .pe-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .pe-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .pe-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* signal system units */
+.main-section .ss-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .ss-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .ss-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Top scroll  */
+
+#move-top {
+    cursor: pointer;
+    position: fixed;
+    right: 3%;
+    bottom: 2%;
+}
+
+#move-top p {
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    color: grey;
+    display: none;
+}
+
+#move-top:hover p {
+    display: block;
+    font-style: bold;
+    font-weight: 500;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Section  */
+
+.footer {
+    background-color: rgba(240, 248, 255, 0.745);
+}
+
+.footer .footer-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    font-size: 6vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+.footer .footer-up h2 {
+    color: rgb(23, 152, 109);
+}
+
+.footer .footer-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2.9vmin;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 20vh;
+    padding-bottom: 1rem;
+    color: rgb(76, 75, 75);
+}
+
+.footer .footer-down a {
+    text-decoration: none;
+    color: crimson;
+}

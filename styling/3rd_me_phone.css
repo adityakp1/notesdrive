@@ -1,0 +1,135 @@
+@media only screen and (max-width:450px){
+
+    /* Navbar Section  */
+    .navbar{
+        height: 9vh;
+        position: relative;
+    }
+
+    .navbar .logo{
+        padding-left: 1rem;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+        padding-right: .1rem;
+        width: 38%;
+        font-size: 6.3vmin;
+    }
+
+    .navbar .logo img{
+        width: 18%;
+    }
+
+    .navbar .login-signup{
+        padding-right: .1rem;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+        padding-left: .1rem;
+        width: 35%;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .links-toggle {
+        transition: 0.65s ease;
+        margin-top: -990px;
+        background-color: rgb(86, 125, 137);
+        flex-direction: column;
+        height: 30vh;
+        width: 100%;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        font-size: 3.35vmin;
+        /* justify-content: center; */
+    }
+
+    .links-toggle li{
+        color: whitesmoke;
+    }
+
+    .toggle-switch {
+        margin-top: 17.2rem;
+    }
+
+    .navbar .login-signup .signup{
+        padding: 0.5rem 0.3rem;
+        font-size: 2.75vmin;
+    }
+
+
+
+    .notes-section .notes-mid{
+        justify-content: space-between;
+        width: 95%;
+    }
+
+    .math img, .digital-elec img, .dsa img, .oops img, .se img, .tc img{
+        height: 60%;
+    }
+
+    .notes-section .notes-mid .math a, .notes-section .notes-mid .digital-elec a, .notes-section .notes-mid .dsa a, .notes-section .notes-mid .oops a, .notes-section .notes-mid .se a, .notes-section .notes-mid .tc a{
+        width: auto;
+        padding: 0.4rem 1.4rem;
+    }
+
+    .notes-section .notes-mid .math{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .dsa{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .oops{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .digital-elec{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .se{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .tc{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .math4{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .me{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .mi{
+        width: 38%;
+        height: 45vh;
+    }
+    .notes-section .notes-mid .dbms{
+        width: 38%;
+        height: 45vh;
+    }
+
+    .main-section .math-h{
+        width: 90%;
+    }
+
+    .main-section .math-h a{
+        padding: 0.3rem 0.3rem;
+        border-radius: .2rem;
+    }
+
+    .top img{
+        /* width: 55%; */
+        height: 5vh;
+    }
+    
+    #move-top:hover p{
+        /* transform: scale(.5); */
+        font-size: 2.5vmin;
+    }
+}
