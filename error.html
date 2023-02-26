@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Err0r</title>
+    <link rel="stylesheet" href="styling/error.css">
+</head>
+<body>
+
+    <!-- Navigation Section  -->
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/8133/8133846.png" width="15%">
+            <p>Notesdrive</p>
+        </div>
+
+
+        <div class="login-signup">
+            <ul class="links-toggle">
+                <a class="hover" href="#error">
+                    <li>Home</li>
+                </a>
+                <a class="hover" href="index.html">
+                    <li>Resources</li>
+                </a>
+                <a class="hover" href="#about">
+                    <li>About</li>
+                </a>
+                <a class="hover" href="#">
+                    <li>Previous Paper</li>
+                </a>
+                <a class="btn_events" target="_blank" href="https://t.me/Mysterio96Bot">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </div>
+        <img src="https://cdn-icons-png.flaticon.com/512/8771/8771145.png" alt="" class="toggle">
+    </div>
+
+
+    <!-- Error Section  -->
+
+<div id="error" class="error">
+    <img src="error-404.png" width="80%">
+
+   <code> <p class="desc">Temporarily Unavailable! 🚫</p> </code>
+</div>
+
+
+
+
+<!-- Footer Section -->
+
+<div class="footer">
+    <div class="footer-up">
+        <img src="https://cdn-icons-png.flaticon.com/512/8133/8133846.png" height="50%" width="10%">
+        <h2>Notesdrive</h2>
+    </div>
+    <div class="footer-down">
+        <p>Copyright &copy; 2023 @ Notesdrive</p>
+        <p>Made with ❤️ in < > </p>
+        <!-- <p>Designed and Developed by <a class="footer-link" target="_blank" href="https://www.instagram.com/a.ditya_pandey/">Aditya Pandey</a></p> -->
+    </div>
+</div>
+    
+    
+    <script>
+        // Toggle 
+        const toggle = document.querySelector('.toggle')
+        const navelinks = document.querySelector('.links-toggle')
+
+        toggle.addEventListener('click', () => {
+            navelinks.classList.toggle('toggle-switch')
+        })
+        // Disable right-click
+
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault()
+            
+        });
+
+        function ctrlShiftKey(e, keyCode) {
+            return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        }
+
+        document.onkeydown = (e) => {
+            // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J; Ctrl + U;
+            if (
+                event.keyCode === 123 ||
+                ctrlShiftKey(e, 'I') ||
+                ctrlShiftKey(e, 'J') ||
+                ctrlShiftKey(e, 'C') ||
+                (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+            )
+                return false;
+        };
+    </script>
+</body>
+</html>
