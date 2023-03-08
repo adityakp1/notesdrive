@@ -83,12 +83,20 @@ body, html{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 60vh;
+    height: 80vh;
+}
+
+.error img{
+    width: 30%;
 }
 
 .desc{
     text-align: center;
     margin: 0rem 2rem;
+}
+
+.desc{
+    font-size: 3.4vmin;
 }
 
 /* Footer Section  */
@@ -159,6 +167,15 @@ body, html{
     .toggle {
         display: block;
     }
+
+    .error{
+        height: 60vh;
+    }
+
+    .error img{
+        width: 80%;
+    }
+
 
     .links-toggle {
         transition: 0.65s ease;
