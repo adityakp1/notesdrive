@@ -676,6 +676,67 @@ html {
     font-weight: 600;
 }
 
+/* Theory of Computation  */
+.notes-section .notes-mid .toc {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .toc img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/hands-using-laptop-with-stem-education-cartoon-style-isolated_1308-52670.jpg?w=826&t=st=1679518540~exp=1679519140~hmac=96f85c07b3740470eb83c2974a6677fe10d7bd4400c27177fb0e8ad0966a316f');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .toc a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .toc a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .toc h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
 /* math units */
 .main-section .math-h {
     width: 80%;
@@ -940,6 +1001,33 @@ html {
     color: navy;
     padding: .5rem .3rem;
     background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* toc units */
+.main-section .toc-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .toc-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .toc-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    /* background-color: navajowhite; */
     margin: .3rem 0rem;
     border-radius: .5rem;
     font-size: 4vmin;
