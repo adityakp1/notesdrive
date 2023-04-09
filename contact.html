@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us</title>
+    <!-- Firebase scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" maxlength="500" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Firebase initialization and form submission script -->
+    <script src="firebase.js"></script>
+
+    <style>
+        /* Styles for the container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 2rem;
+            font-family: Arial, sans-serif;
+            background-image: url('contact_bg.jpg');
+            
+        }
+
+        /* Styles for the heading */
+        h1 {
+            margin-bottom: 2rem;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        /* Styles for the form */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFF;
+            padding: 3rem;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 500px;
+            width: 65%;
+        }
+
+        form label {
+            margin-top: 0.1rem;
+            margin-bottom: 0rem;
+            color: #12536b;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-align: left;
+            width: 100%;
+        }
+
+        form input,
+        form textarea {
+            padding: 0.5rem 0.3rem;
+            margin-bottom: 0rem;
+            border-radius: 5px;
+            border: 1px solid #CCC;
+            font-size: .86rem;
+            width: 100%;
+        }
+
+        form textarea {
+            height: 100px;
+        }
+
+        form button[type="submit"] {
+            background-color: #12536b;
+            color: #FFF;
+            padding: 0.4rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            width: 100%;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: #c1e4f1;
+            color: #12536b;
+            border: 1px solid #c1e4f1;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                justify-content: flex-start;
+            }
+
+            input,textarea {
+                margin-bottom: 10px;
+            }
+        }
+
+    </style>
+</body>
+
+</html>
