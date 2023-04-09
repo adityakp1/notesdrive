@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Password Reset</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h2 class="text-center mb-4">Password Reset</h2>
+          <form id="reset-form">
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-4">Reset Password</button>
+          </form>
+          <div class="mt-4 text-center">
+            <a href="index.html">Back to login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
+    <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+            apiKey: "AIzaSyDynEt_UV4EULxOFSoGU167YLPZrZ9l9zs",
+            authDomain: "notesdrive-243a7.firebaseapp.com",
+            databaseURL: "https://notesdrive-243a7-default-rtdb.firebaseio.com",
+            projectId: "notesdrive-243a7",
+            storageBucket: "notesdrive-243a7.appspot.com",
+            messagingSenderId: "1048421238550",
+            appId: "1:1048421238550:web:5f994e9d560023a91af237",
+            measurementId: "G-NZ5JLKGW82"
+        };
+      firebase.initializeApp(firebaseConfig);
+
+      // Get a reference to the auth service
+      var auth = firebase.auth();
+
+      // Add a listener for the reset-form submit event
+      document.getElementById('reset-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Get the user's email address
+        var email = document.getElementById('email').value;
+
+        // Send a password reset email
+        auth.sendPasswordResetEmail(email)
+          .then(function() {
+            // Password reset email sent
+            alert('Password reset email sent. Please check your inbox/spam.');
+          })
+          .catch(function(error) {
+            // An error occurred
+            alert(error.message);
+          });
+      });
+    </script>
+  </body>
+</html>
