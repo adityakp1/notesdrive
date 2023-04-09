@@ -3,7 +3,8 @@
 
 <head>
     <title>Notesdrive</title>
-    <meta name="description" content="Here you can check the notes of all the semesters of RTU (Rajasthan Technical university)">
+    <meta name="description"
+        content="Here you can check the notes of all the semesters of RTU (Rajasthan Technical university)">
     <link rel="stylesheet" href="form.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -45,7 +46,8 @@
                 <div class="right">
                     <h2>"NotesDrive - Your One-Stop Solution for Comprehensive Engineering Notes"</h2>
 
-                    <p>NotesDrive is a reliable and convenient resource for engineering students who want to access high-quality notes in one place, saving them time and effort.</p>
+                    <p>NotesDrive is a reliable and convenient resource for engineering students who want to access
+                        high-quality notes in one place, saving them time and effort.</p>
                 </div>
             </div>
 
@@ -54,7 +56,9 @@
                 <div class="left">
                     <h2>"Elevate Your Learning Experience with NotesDrive"</h2>
 
-                    <p>NotesDrive as a resource can help students improve their overall learning experience. By accessing comprehensive notes in their chosen field of study, students can deepen their understanding of key concepts, boost their confidence, and perform better in their exams. </p>
+                    <p>NotesDrive as a resource can help students improve their overall learning experience. By
+                        accessing comprehensive notes in their chosen field of study, students can deepen their
+                        understanding of key concepts, boost their confidence, and perform better in their exams. </p>
                 </div>
 
                 <div class="right">
@@ -77,7 +81,10 @@
                     <h2>Welcome! <br><span>
                             To Notesdrive
                         </span></h2>
-                    <p>NotesDrive is an innovative platform that offers engineering students from different branches easy access to comprehensive notes. This platform is designed to cater to the needs of engineering students who are looking for well-structured, organized, and up-to-date notes that cover all the essential topics in their chosen field of study.</p>
+                    <p>NotesDrive is an innovative platform that offers engineering students from different branches
+                        easy access to comprehensive notes. This platform is designed to cater to the needs of
+                        engineering students who are looking for well-structured, organized, and up-to-date notes that
+                        cover all the essential topics in their chosen field of study.</p>
 
                 </div>
             </div>
@@ -96,13 +103,15 @@
                             <label for="password">Password</label>
                         </div>
                         <div class="remember-password">
-                            
+
                             <a href="#">Forget Password</a>
                         </div>
                         <button type="button" id="login" name="login" value="login" class="btn btn-success">Login
                             In</button>
                         <div class="create-account">
-                            <a href="https://t.me/Mysterio96Bot" class="register-link"><p>Request to Create A New Account? </p></a>
+                            <a href="https://t.me/Mysterio96Bot" class="register-link">
+                                <p>Request to Create A New Account? </p>
+                            </a>
                         </div>
                     </form>
                 </div>
@@ -126,7 +135,7 @@
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
-        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -162,7 +171,7 @@
                     console.log(user);
                     window.location = 'notes.html';
                     alert(user.email + " Login successfully!!!");
-                    document.getElementById('logout').style.display = 'block';
+
                     // ...
                 })
                 .catch((error) => {
@@ -172,18 +181,20 @@
                     alert(errorMessage);
                 });
 
-            onAuthStateChanged(user => {
-                if (user) {
-                    window.location = 'https://notesdrive-aietm.me/notes.html'; //After successful login, user will be redirected to home.html
-                } else{
-                    window.location = 'https://notesdrive-aietm.me/'
-                }
-            });
         });
+
+        auth.onAuthStateChanged((user) => {
+            if(user) {
+                // User is signed in
+                console.log("User Signed In!!");
+                window.location = 'notes.html';
+            } else {
+                // User is signed out
+                console.log("User Signed Out!!");
+            }
+        });
+      
 	  //----- End
-
-
-
 
     </script>
 
