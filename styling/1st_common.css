@@ -1,0 +1,1033 @@
+* {
+    -webkit-user-select: none;
+        /* Safari */
+        -ms-user-select: none;
+        /* IE 10 and IE 11 */
+        user-select: none;
+        /* Standard syntax */
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar Section  */
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(195, 223, 247);
+    /* position: sticky;
+    z-index: 1;
+    top: 0; */
+    /* position: fixed; */
+}
+
+.navbar .logo {
+    padding: 1rem;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 5vmin;
+    font-weight: 800;
+    letter-spacing: .4px;
+    color: cadetblue;
+}
+
+.navbar .login-signup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    width: 40%;
+    font-family: 'Barlow', sans-serif;
+    font-size: 3.2vmin;
+    font-weight: 500;
+}
+
+.navbar .login-signup a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .login-signup li:hover{
+    text-decoration: underline;
+    color:darksalmon;
+    transition: .4s;
+}
+
+.links-toggle{
+    width: 100%;
+    display: flex;
+    font-size: 3vmin;
+    color: aliceblue;
+    align-items: center;
+    /* font-family: 'Roboto Flex', sans-serif; */
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.toggle {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    width: 10%;
+    top: 13px;
+    right: 13px;
+}
+
+.navbar .login-signup .signup {
+    text-decoration: none;
+    color: black;
+    background-color: cadetblue;
+    color: whitesmoke;
+    padding: 1rem;
+    border-radius: .4rem;
+}
+
+.navbar .login-signup .login {
+    color: black;
+}
+
+
+/* Notes Section  */
+
+.notes-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01)), url('../background-white-shape-1-sm.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.notes-mid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+/* Main Section  */
+.main-section {
+    width: 100%;
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../background-white-shape-3.svg');
+    background-position: center;
+    background-size: contain;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    background-color: rgb(243, 239, 239);
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+/* Math Notes  */
+
+.notes-section .notes-mid .math {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .math img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/mathematics-concept-illustration_114360-4288.jpg?w=740&t=st=1673616251~exp=1673616851~hmac=abd5f7993fc90522d5213171bfd972d9da788c280e46e797a84e1b154fb5477d');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .math a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .math a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .math h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Chemistry Notes  */
+
+.notes-section .notes-mid .chem {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .chem img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/hr-manager-with-employee-interview-business-flow-chart-employee-assessment-software-hr-company-system-employee-check-programme-concept_335657-403.jpg?w=900&t=st=1673616692~exp=1673617292~hmac=495ff71505aedc71166158bb7b84d942f10732eb79d866bc660caf1c9f127524');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .chem a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+
+}
+
+.notes-section .notes-mid .chem a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .chem h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* Civil Engineering Notes  */
+
+.notes-section .notes-mid .civil {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .civil img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/premium-vector/isometric-pc-maintenance-vector-concept_516005-173.jpg?w=900');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .civil a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .civil a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .civil h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* PPS Notes  */
+
+.notes-section .notes-mid .pps {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .pps img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/programmer-concept-idea-coding-testing-writing-program-using-internet-different-software-website-development-optimization-isolated-vector-illustration_613284-2459.jpg?w=740&t=st=1673616851~exp=1673617451~hmac=727e314c1285533cca8ebcdb8569a8290ca1c41817ea283a47cbfe0c25cc6fbf');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .pps a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .pps a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .pps h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* Human value Notes  */
+
+.notes-section .notes-mid .hv {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .hv img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/premium-vector/system-administrator-online-service-platform-technical-work_277904-16674.jpg?w=740');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .hv a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .hv a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .hv h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+
+/* Communication Skill Notes  */
+
+.notes-section .notes-mid .cs {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .cs img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/live-collaboration-concept-illustration_114360-2514.jpg?w=900&t=st=1673617053~exp=1673617653~hmac=33da2d507106799236dc39684bc77182c748d9c874601e5b87bc67ccee88cfe1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .cs a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .2s linear;
+}
+
+.notes-section .notes-mid .cs a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .cs h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+/* Math 2nd sem notes  */
+.notes-section .notes-mid .math4 {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .math4 img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/mathematics-concept-illustration_114360-4288.jpg?w=740&t=st=1673616251~exp=1673616851~hmac=abd5f7993fc90522d5213171bfd972d9da788c280e46e797a84e1b154fb5477d');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .math4 a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .math4 a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .math4 h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Mechanical Engineering  */
+.notes-section .notes-mid .me {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .me img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/illustrated-stock-market-analysis_23-2148584362.jpg?w=900&t=st=1676584553~exp=1676585153~hmac=3d2730574824ab9f97bb4786be3f6b377e9756c51bbef332b89a61e9a27980ef');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .me a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .me a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .me h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Physics Notes  */
+.notes-section .notes-mid .phy {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .phy img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/printed-circuit-board-concept-illustration_114360-4999.jpg?w=740&t=st=1676584726~exp=1676585326~hmac=88c245794962852b3484532a29b165fb1632bb7d3532ec01344b22769d9806e2');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .phy a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .phy a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .phy h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+/* Basic Electrical Engg Notes  */
+.notes-section .notes-mid .bee {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.notes-section .notes-mid .bee img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://img.freepik.com/free-vector/data-base-administrator-concept-admin-manager-working-data-center-modern-computer-technology-it-profession-idea-isolated-vector-illustration_613284-2327.jpg?w=740&t=st=1676584665~exp=1676585265~hmac=58dfd80e8a893e0ea6ba6d4a40af15cdcdcdd7fa08c065501267594e2dec38f7');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.notes-section .notes-mid .bee a {
+    padding: .4rem 2.4rem;
+    background-color: rgb(195, 223, 247);
+    margin-top: .4rem;
+    text-decoration: none;
+    color: navy;
+    border-radius: .3rem;
+    font-size: 3vmin;
+    transition: .3s linear;
+}
+
+.notes-section .notes-mid .bee a:hover {
+    box-shadow: 4px 4px 15px rgb(195, 223, 247);
+    transition: 0.2s linear;
+}
+
+.notes-section .notes-mid .bee h2 {
+    color: rgb(42, 42, 140);
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 4vmin;
+    margin-top: .6rem;
+    margin-bottom: .4rem;
+}
+
+.notes_link {
+    text-decoration: none;
+    color: navy;
+    font-size: 4vmin;
+    padding: .5rem 0rem;
+    font-family: 'Barlow', sans-serif;
+}
+
+.notes_link:hover {
+    text-decoration: underline;
+    transition: 0.7s;
+}
+
+.list_bold {
+    font-weight: 600;
+}
+
+
+
+/* math units */
+.main-section .math-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .math-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .math-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    /* background-color: navajowhite; */
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* chemistry units  */
+.main-section .chem-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .chem-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .chem-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* civil units */
+.main-section .civil-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .civil-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .civil-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* pps units  */
+.main-section .pps-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .pps-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .pps-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* hv units  */
+.main-section .hv-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .hv-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .hv-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* communication skills units */
+.main-section .cs-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .cs-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .cs-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* math4 units */
+.main-section .math4-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .math4-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .math4-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* mechanical engg units */
+.main-section .me-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .me-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .me-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* engg phy units */
+.main-section .phy-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .phy-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .phy-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* bee units */
+.main-section .bee-h {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-section .bee-h h2 {
+    text-align: center;
+    color: rgb(42, 42, 140);
+    font-family: 'Barlow', sans-serif;
+    font-size: 9vmin;
+}
+
+.main-section .bee-h p {
+    color: navy;
+    padding: .5rem .3rem;
+    background-color: navajowhite;
+    margin: .3rem 0rem;
+    border-radius: .5rem;
+    font-size: 4vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Top scroll  */
+
+#move-top {
+    cursor: pointer;
+    position: fixed;
+    right: 3%;
+    bottom: 2%;
+}
+
+#move-top p {
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    color: grey;
+    display: none;
+}
+
+#move-top:hover p {
+    display: block;
+    font-style: bold;
+    font-weight: 500;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Section  */
+
+.footer {
+    background-color: rgba(240, 248, 255, 0.745);
+}
+
+.footer .footer-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    font-size: 6vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+.footer .footer-up h2 {
+    color: rgb(23, 152, 109);
+}
+
+.footer .footer-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2.9vmin;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 20vh;
+    padding-bottom: 1rem;
+    color: rgb(76, 75, 75);
+}
+
+.footer .footer-down a {
+    text-decoration: none;
+    color: crimson;
+}
