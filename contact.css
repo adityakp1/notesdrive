@@ -63,18 +63,85 @@ button:hover {
     background-color: #0062cc;
 }
 
-input:focus,
-textarea:focus {
+input:focus,textarea:focus {
     outline: none;
     border: 2px solid #007bff;
 }
 
 
+ /* Footer Section */
+
+.footer {
+    background-color: rgba(45, 68, 88, 0.745);
+}
+
+.footer .footer-up h2 {
+    color: rgb(23, 152, 109);
+    margin-bottom: 2rem;
+}
+
+.footer .footer-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    font-size: 6vmin;
+    font-family: 'Barlow', sans-serif;
+}
+
+.footer .footer-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2.9vmin;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 20vh;
+    padding-bottom: 1rem;
+    color: rgb(215, 223, 223);
+}
+
+.footer .footer-down a {
+    text-decoration: none;
+    color: crimson;
+}
+
+.footer .suggestions{
+    font-size: 3.2vmin;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+    color: rgb(215, 223, 223);
+}
+
 
 @media only screen and (max-width: 600px) {
-    .container {
-        justify-content: flex-start;
+    .container h1{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
     }
 
+    .container {
+        justify-content: center;
+    }
 
+    input,textarea {
+        margin-bottom: 10px;
+    }
+
+    form{
+        width: 93%;
+        padding: 1.5rem;
+    }
+
+    textarea {
+        min-height: 95px;
+    }
+
+    .footer .suggestions{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        text-align: center;
+    }
 }

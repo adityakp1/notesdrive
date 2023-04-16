@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Contact Us</title>
     <!-- Firebase scripts -->
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
@@ -11,6 +14,84 @@
     <!-- CSS styles -->
     <link rel="stylesheet" href="contact.css">
 </head>
+
+<style>
+
+    /* Styles for the container */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2rem;
+        font-family: Arial, sans-serif;
+        background-image: url('contact_bg.jpg');
+        
+    }
+
+    /* Styles for the heading */
+    h1 {
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    /* Styles for the form */
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFF;
+        padding: 3rem;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        max-width: 500px;
+        width: 65%;
+    }
+
+    form label {
+        margin-top: 0.1rem;
+        margin-bottom: 0rem;
+        color: #12536b;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-align: left;
+        width: 100%;
+    }
+
+    form input,
+    form textarea {
+        padding: 0.5rem 0.3rem;
+        margin-bottom: 0rem;
+        border-radius: 5px;
+        border: 1px solid #CCC;
+        font-size: .86rem;
+        width: 100%;
+    }
+
+    form textarea {
+        height: 100px;
+    }
+
+    form button[type="submit"] {
+        background-color: #12536b;
+        color: #FFF;
+        padding: 0.4rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        width: 100%;
+    }
+
+    form button[type="submit"]:hover {
+        background-color: #c1e4f1;
+        color: #12536b;
+        border: 1px solid #c1e4f1;
+    }
+
+</style>
 
 <body>
     <div class="container">
@@ -29,95 +110,54 @@
         </form>
     </div>
 
+    <!-- Footer Section  -->
+    <div class="footer">
+        <div class="footer">
+            <div class="footer-up">
+                <img src="https://cdn-icons-png.flaticon.com/512/8133/8133846.png" height="30%" width="10%">
+            <h2>Notesdrive</h2>
+                <p class="suggestions">We believe that user feedback is an essential component of creating a successful and user-friendly website. Therefore, we welcome suggestions and ideas from our users on the design of our website. Our team is dedicated to providing the best possible user experience, and we understand that incorporating user feedback is a key part of achieving this goal.</p>
+            </div>
+            <div class="footer-down">
+                <p>Copyright &copy; 2023 @ Notesdrive</p>
+                <p>Made with ❤️ in < > </p>
+                <!-- <p>Designed and Developed by <a class="footer-link" target="_blank"
+                        href="https://www.instagram.com/a.ditya_pandey/">Aditya Pandey</a></p> -->
+            </div>
+        </div>
+    </div>
+
     <!-- Firebase initialization and form submission script -->
     <script src="firebase.js"></script>
 
-    <style>
-        /* Styles for the container */
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 2rem;
-            font-family: Arial, sans-serif;
-            background-image: url('contact_bg.jpg');
-            
+    <script>
+
+        // Disable right-click
+
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault()
+
+        });
+
+        function ctrlShiftKey(e, keyCode) {
+            return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
         }
 
-        /* Styles for the heading */
-        h1 {
-            margin-bottom: 2rem;
-            font-size: 3rem;
-            text-align: center;
-        }
+        document.onkeydown = (e) => {
+            // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J; Ctrl + U;
+            if (
+                event.keyCode === 123 ||
+                ctrlShiftKey(e, 'I') ||
+                ctrlShiftKey(e, 'J') ||
+                ctrlShiftKey(e, 'C') ||
+                (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+            )
+                return false;
+        };
 
-        /* Styles for the form */
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #FFF;
-            padding: 3rem;
-            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            max-width: 500px;
-            width: 65%;
-        }
+    </script>
 
-        form label {
-            margin-top: 0.1rem;
-            margin-bottom: 0rem;
-            color: #12536b;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-align: left;
-            width: 100%;
-        }
-
-        form input,
-        form textarea {
-            padding: 0.5rem 0.3rem;
-            margin-bottom: 0rem;
-            border-radius: 5px;
-            border: 1px solid #CCC;
-            font-size: .86rem;
-            width: 100%;
-        }
-
-        form textarea {
-            height: 100px;
-        }
-
-        form button[type="submit"] {
-            background-color: #12536b;
-            color: #FFF;
-            padding: 0.4rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-            width: 100%;
-        }
-
-        form button[type="submit"]:hover {
-            background-color: #c1e4f1;
-            color: #12536b;
-            border: 1px solid #c1e4f1;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .container {
-                justify-content: flex-start;
-            }
-
-            input,textarea {
-                margin-bottom: 10px;
-            }
-        }
-
-    </style>
+    
 </body>
 
 </html>
