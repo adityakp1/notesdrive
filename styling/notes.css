@@ -299,21 +299,26 @@ body,html{
     transition: 0.3s linear;
 }
 
+.main-section .details .courses #common:hover .intro{
+    height: 30vh;
+    transition: 0.3s linear;
+}
+
 /* Common Course Hover  */
 
 .main-section .details .courses #common img{
-    background-image: url('https://img.freepik.com/free-vector/code-testing-cartoon-banner-functional-test-methodology-programming-search-errors-bugs-website-platform-development-dashboard-usability-optimization-computer-pc-vector-illustration_107791-3766.jpg?w=1380&t=st=1673490313~exp=1673490913~hmac=c07088ab316b32d9ae3a510e759bc65634409ebd35f22354c47bf4fe40c00987');
+    background-image: url('https://img.freepik.com/premium-vector/typography-art-design-vector-graphic-illustration_56989-99.jpg?w=360');
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
 }
 
 .main-section .details .courses #common:hover img{
-    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('https://img.freepik.com/free-vector/code-testing-cartoon-banner-functional-test-methodology-programming-search-errors-bugs-website-platform-development-dashboard-usability-optimization-computer-pc-vector-illustration_107791-3766.jpg?w=1380&t=st=1673490313~exp=1673490913~hmac=c07088ab316b32d9ae3a510e759bc65634409ebd35f22354c47bf4fe40c00987');
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('https://img.freepik.com/premium-vector/typography-art-design-vector-graphic-illustration_56989-99.jpg?w=360');
 }
 
 .main-section .details .courses #common:hover .intro{
-    background: rgba(98, 47, 143, 0.9);
+    background: rgba(35, 15, 77, 0.9);
     color: whitesmoke;
 }
 
