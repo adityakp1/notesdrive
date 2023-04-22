@@ -116,11 +116,11 @@
         height: 45vh;
     }
 
-    .main-section .math-h, .main-section .dsa-h, .main-section .oops-h, .main-section .de-h, .main-section .se-h, .main-section .tc-h, .main-section .math4-h, .main-section .me-h, .main-section .mi-h, .main-section .dbms-h{
+    .main-section .math-h, .main-section .dsa-h, .main-section .oops-h, .main-section .de-h, .main-section .se-h, .main-section .tc-h, .main-section .math4-h, .main-section .me-h, .main-section .mi-h, .main-section .dbms-h, .main-section .toc-h{
         width: 90%;
     }
 
-    .main-section .math-h a, .main-section .dsa-h a, .main-section .oops-h a, .main-section .de-h a, .main-section .se-h a, .main-section .tc-h a, .main-section .math4-h a, .main-section .me-h a, .main-section .mi-h a, .main-section .dbms-h a{
+    .main-section .math-h a, .main-section .dsa-h a, .main-section .oops-h a, .main-section .de-h a, .main-section .se-h a, .main-section .tc-h a, .main-section .math4-h a, .main-section .me-h a, .main-section .mi-h a, .main-section .dbms-h a, .main-section .toc-h a{
         padding: 0.3rem 0.3rem;
         border-radius: .2rem;
     }
