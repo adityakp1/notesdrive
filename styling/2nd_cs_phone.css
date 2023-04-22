@@ -62,11 +62,11 @@
         width: 95%;
     }
 
-    .math img, .digital-elec img, .dsa img, .oops img, .se img, .tc img, .math4 img, .me img, .mi img, .dbms img{
+    .math img, .digital-elec img, .dsa img, .oops img, .se img, .tc img, .math4 img, .me img, .mi img, .dbms img, .toc img{
         height: 60%;
     }
 
-    .notes-section .notes-mid .math a, .notes-section .notes-mid .digital-elec a, .notes-section .notes-mid .dsa a, .notes-section .notes-mid .oops a, .notes-section .notes-mid .se a, .notes-section .notes-mid .tc a, .notes-mid .math4 a, .notes-mid .me a, .notes-mid .mi a, .notes-mid .dbms a{
+    .notes-section .notes-mid .math a, .notes-section .notes-mid .digital-elec a, .notes-section .notes-mid .dsa a, .notes-section .notes-mid .oops a, .notes-section .notes-mid .se a, .notes-section .notes-mid .tc a, .notes-mid .math4 a, .notes-mid .me a, .notes-mid .mi a, .notes-mid .dbms a, .notes-mid .toc a{
         width: auto;
         padding: 0.4rem 1.4rem;
     }
