@@ -111,6 +111,10 @@
         width: 38%;
         height: 45vh;
     }
+    .notes-section .notes-mid .toc{
+        width: 38%;
+        height: 45vh;
+    }
 
     .main-section .math-h, .main-section .dsa-h, .main-section .oops-h, .main-section .de-h, .main-section .se-h, .main-section .tc-h, .main-section .math4-h, .main-section .me-h, .main-section .mi-h, .main-section .dbms-h{
         width: 90%;
