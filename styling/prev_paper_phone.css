@@ -1,0 +1,142 @@
+
+@media only screen and (max-width:400px){
+
+    /* Navbar Section  */
+    .navbar{
+        height: 9.2vh;
+    }
+    .navbar .logo{
+        padding-left: 1rem;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+        padding-right: .1rem;
+        width: 38%;
+        font-size: 6.3vmin;
+    }
+
+    .navbar .logo img{
+        width: 20%;
+    }
+
+    .navbar .login-signup{
+        padding-right: .1rem;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+        padding-left: .1rem;
+        width: 45%;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .links-toggle {
+        transition: 0.65s ease;
+        margin-top: -990px;
+        background-color: rgb(86, 125, 137);
+        flex-direction: column;
+        height: 60vh;
+        width: 100%;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        font-size: 3.35vmin;
+        /* justify-content: center; */
+    }
+
+    .links-toggle li{
+        color: whitesmoke;
+    }
+
+    .toggle-switch {
+        margin-top: 23.2rem;
+    }
+
+    /* Gallery Section  */
+
+    .gallery .gallery-mid .search{
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .search .left img {
+        padding: 0.2rem 0.5rem;
+        width: 23px;
+    }
+
+    .gallery .gallery-mid .search .right{
+        margin-right: 0;
+        padding: 0;
+        width: 80%;
+        display: flex;
+        height: 8vh;
+    align-items: center;
+    }
+
+    .gallery .gallery-mid .search .left{
+        width: 100%;
+        justify-content: center;
+    }
+    .search .left p{
+        font-size: 4.3vmin;
+    }
+    .search .right a{
+        padding: 0.3rem 3rem;
+        font-size: 4vmin;
+    }
+    .gallery-testinomial{
+        width: auto;
+        margin: auto;
+    }
+
+    .gallery-testinomial .one, .gallery-testinomial .two, .gallery-testinomial .three{
+        text-align: center;
+        width: 30%;
+    }
+
+    .gallery-testinomial .one h2, .gallery-testinomial .two h2, .gallery-testinomial .three h2{
+        font-size: 6vmin;
+    }
+
+    .gallery-testinomial .one p, .gallery-testinomial .two p, .gallery-testinomial .three p{
+        font-size: 4vmin;
+    }
+
+    .gallery-testinomial .one img, .gallery-testinomial .two img, .gallery-testinomial .three img{
+        height: 30%;
+    }
+
+    /* Main Section  */
+    .main-section{
+        margin-top: 2rem;
+    }
+    .main-section .details h1{
+        font-size: 7vmin;
+         margin-left: 2rem;
+    }
+
+    /* courses  */
+    .main-section .details .courses{
+        flex-direction: column;
+    }
+    .main-section .details .courses .c1{
+        width: 87%;
+    height: 45vh;
+    }
+    .main-section .details .courses .c1 .intro{
+        height: 10.5vh;
+    }
+    .intro h3{
+        font-size: 7vmin;
+    }
+    .main-section .details .courses .c1 .intro .hover{
+        font-size: 4.2vmin;
+    }
+
+    /* Example  */
+    .example{
+        height: 60vh;
+        background-attachment: fixed;
+    }
+}
+
